@@ -1,0 +1,16 @@
+<h1>API</h1>
+<div ng-repeat="user in editar.retorno">
+    <ul>
+        <li>
+            Nome: {{user.name}}
+        </li>
+        <li>
+           Email: {{user.email}}
+        </li>
+        <li>
+           Telefone: {{user.phone}}
+        </li>
+    </ul>
+</div>
+<button type="button" ui-sref="app.home" class="btn btn-info">Home</button>
+<button type="button" ui-sref="app.perfil" class="btn btn-info">Perfil</button>

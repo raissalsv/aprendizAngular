@@ -1,6 +1,5 @@
 <h1>Perfil</h1>
 <div ng-if="perfil.mostrarDados">
-
     <ul>
         <li>
             Nome: {{perfil.UsuarioService.usuario.nome}}
@@ -12,14 +11,9 @@
             Telefone: {{perfil.UsuarioService.usuario.telefone}}
         </li>
     </ul>
-
-    <button type="button" ui-sref="app.editar">API</button>
-
 </div>
-<a ui-sref="app.home">Home</a>
-<button type="button" ng-click="perfil.mostrarDados = !perfil.mostrarDados">
+<button type="button" ui-sref="app.home" class="btn btn-info">Home</button>
+<button type="button" ui-sref="app.editar" class="btn btn-info">API</button>
+<button type="button" ng-click="perfil.mostrarDados = !perfil.mostrarDados" class="btn btn-info">
     {{perfil.mostrarDados ? 'Esconder' : 'Mostrar'}}
 </button>
-
-
-

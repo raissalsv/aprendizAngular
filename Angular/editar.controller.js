@@ -12,13 +12,15 @@ function ApiController(UsuarioService, $http) {
 
         $http({
             method: 'GET',
-            url: root + '/posts/1',
+            url: root + '/users',
         }).then(function successCallback(response) {
-            console.log(response.data);
-            self.dadosResposta = {
-                titulo: response.data.title,
-                msg: response.data.body
-            };
+           // self.dadosResposta = {
+           //     name: response.data.name,
+           //     username: response.data.username,
+           //     email: response.data.email
+           // };
+           console.log(response.data);
+            self.retorno = response.data;
         }, function errorCallback(response) {
             console.log("ERRO: " + response);
         });
