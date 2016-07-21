@@ -1,13 +1,25 @@
 <h1>Perfil</h1>
-<ul>
-	<li>
-		Nome: {{perfil.UsuarioService.usuario.nome}}
-	</li>
-		<li>
-		Email: {{perfil.UsuarioService.usuario.email}}
-	</li>
-		<li>
-		Telefone: {{perfil.UsuarioService.usuario.telefone}}
-	</li>
-</ul>
-	<a ui-sref="app.home">Home</a>
+<div ng-if="perfil.mostrarDados">
+
+    <ul>
+        <li>
+            Nome: {{perfil.UsuarioService.usuario.nome}}
+        </li>
+        <li>
+            Email: {{perfil.UsuarioService.usuario.email}}
+        </li>
+        <li>
+            Telefone: {{perfil.UsuarioService.usuario.telefone}}
+        </li>
+    </ul>
+
+    <button type="button" ui-sref="app.editar">API</button>
+
+</div>
+<a ui-sref="app.home">Home</a>
+<button type="button" ng-click="perfil.mostrarDados = !perfil.mostrarDados">
+    {{perfil.mostrarDados ? 'Esconder' : 'Mostrar'}}
+</button>
+
+
+

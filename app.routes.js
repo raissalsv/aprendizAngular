@@ -34,5 +34,15 @@
             controllerAs: "perfil"
           }
         }
-      });
+      })
+        .state('app.editar', {
+          url: "/editar",
+          views: {
+            "conteudo@": {
+              templateUrl: "editar.html",
+              controller: "ApiController",
+              controllerAs: "editar"
+            }
+          }
+        });
   }

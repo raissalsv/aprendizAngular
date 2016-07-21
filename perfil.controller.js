@@ -1,12 +1,14 @@
 angular
-		.module("meuapp")
-		.controller("PerfilController", PerfilController);
+    .module("meuapp")
+    .controller("PerfilController", PerfilController);
 
 
-		function PerfilController (UsuarioService){
-			var self = this;
+function PerfilController(UsuarioService) {
+    var self = this;
 
-			self.UsuarioService = UsuarioService;
+    self.UsuarioService = UsuarioService;
+    self.mostrarDados = true;
 
-		}
+}
+
 
