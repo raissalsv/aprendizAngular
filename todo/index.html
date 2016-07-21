@@ -1,0 +1,23 @@
+<html ng-app="todo">
+<head>
+	<title></title>
+</head>
+<body ng-controller="IndexController as index">
+<div>
+	Nova Tarefa <input type="text" ng-model="index.texto">
+	<button ng-click="index.todoService.incluir(index.texto)">Incluir</button>
+</div>
+<div ng-repeat="tarefa in index.todoService.listaTarefas">
+	<input type="checkbox" ng-click="index.todoService.finalizar(tarefa)">
+	<span ng-class="{strike: index.todoService.ativa(tarefa)}">{{tarefa.texto}}</span>
+	<button ng-click="index.todoService.excluir(tarefa)">Remover Tarefa</button>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js"></script>
+<script src="app.module.js"></script>
+<script src="index.controller.js"></script>
+<script src="todo.service.js"></script>
+<style>
+.strike{text-decoration: line-through;}
+</style>
+</body>
+</html>
