@@ -7,6 +7,6 @@ angular
 	function IndexController(todoService){
 		var self = this;
 		self.todoService = todoService;
-		self.texto = '';
+		todoService.listar();
 		console.log(todoService);
 	}
